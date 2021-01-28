@@ -98,7 +98,7 @@ const getScript = url => new Promise((resolve, reject) => {
   isHome: false,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2021-01-27 19:02:08'
+  postUpdate: '2021-01-27 19:23:10'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -181,7 +181,7 @@ if (fontSizeVal !== undefined) {
   }
 
   const getComment = () => {
-    fetch('https://api.github.com/repos/https://github.com/lihangfu/gitalk/issues/comments?sort=updated&direction=desc&per_page=6&page=1')
+    fetch('https://api.github.com/repos/gitalk/issues/comments?sort=updated&direction=desc&per_page=6&page=1')
       .then(response => response.json())
       .then(data => {
         const githubArray = data.map(item => {
