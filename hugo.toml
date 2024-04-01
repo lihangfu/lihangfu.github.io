@@ -1,21 +1,34 @@
 # 网站的基础 URL
 baseURL = 'https://www.lihangfu.cn/'
-languageCode = 'zh-cn'
+# 内部RSS模板中的<language>元素，内部别名模板中<html>元素的lang属性
+languageCode = 'zh'
+# 网站标题
 title = '危机'
+# 主题
 theme = 'hello-friend-ng'
 
+# 代码高亮
 PygmentsCodeFences = true
+# 代码风格
 PygmentsStyle = "monokai"
 
+# 表示每页显示的内容数量
 paginate  = 10
+# RSS订阅源中项目的最大数量
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-# googleAnalytics = ""
-# disqusShortname = ""
+weight = 1
+# 网站的版权声明
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
+# 没有语言标识的内容将默认为此语言
+defaultContentLanguage = 'zh'
+
+# 查找原型文件（内容模板）的目录
 archetypeDir = "archetypes"
+# 读取内容文件的目录
 contentDir   = "content"
+# 读取数据文件的目录
 dataDir      = "data"
 layoutDir    = "layouts"
 publishDir   = "public"
@@ -25,13 +38,17 @@ buildFuture  = false
 buildExpired = false
 canonifyURLs = true
 
+# 启用生成robots.txt文件。默认为false。
 enableRobotsTXT = true
 enableGitInfo   = false
+# 启用页面内容的 Emoji 表情符号支持
 enableEmoji     = true
+# 如果翻译缺失，则显示占位符而不是默认值或空字符串。默认为false。
 enableMissingTranslationPlaceholders = false
 disableRSS     = false
 disableSitemap = false
 disable404     = false
+# 默认情况下，Hugo会在仅首页的HTML头部插入一个生成器元标签
 disableHugoGeneratorInject = false
 
 [permalinks]
@@ -56,13 +73,13 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
+  description = ""
   keywords = ""
   images = [""]
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Hello Friend NG"
+  homeSubtitle = ""
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -234,25 +251,14 @@ disableHugoGeneratorInject = false
   #  name = "stackoverflow"
   #  url  = "https://www.stackoverflow.com/"
 
-[languages]
-  [languages.en]
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.en.params]
-    subtitle  = "Hello Friend NG Theme"
-
-  [languages.fr]
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.fr.params]
-    subtitle  = "Hello Friend NG Theme"
-
 [menu]
   [[menu.main]]
     identifier = "about"
     name       = "关于"
+    title      = "关于"
     url        = "about/"
   [[menu.main]]
     identifier = "posts"
     name       = "文章"
+    title      = "文章"
     url        = "posts/"
